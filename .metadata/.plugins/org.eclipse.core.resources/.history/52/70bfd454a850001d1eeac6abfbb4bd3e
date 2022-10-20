@@ -1,0 +1,28 @@
+package com.example.spring.rabbitmq.demo;
+
+import org.springframework.amqp.core.Binding;
+import org.springframework.amqp.core.BindingBuilder;
+import org.springframework.amqp.core.DirectExchange;
+import org.springframework.amqp.core.Queue;
+import org.springframework.amqp.core.TopicExchange;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class MQConfig {
+
+	@Bean
+	public Queue getQueue() {
+		return new Queue("message_queue");
+	}
+
+	@Bean
+	public DirectExchange getExchange() {
+		return new DirectExchange("message_exchange");
+	}
+
+	@Bean
+	public Binding binding(Queue queue, DirectExchange exchange) {
+		return BindingBuilder.bind(queue).to(exchange).with("message_routingKey");
+	}
+}

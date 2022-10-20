@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+C:\Users\ruthvik.kottala\Desktop\Projectpractise\RabbitMQ\.metadata\.plugins\org.eclipse.jdt.core
+1535932027.index
+3508410335.index

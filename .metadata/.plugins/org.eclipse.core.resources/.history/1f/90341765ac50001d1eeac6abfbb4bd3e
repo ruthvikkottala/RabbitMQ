@@ -1,0 +1,5 @@
+package com.example.spring.rabbitmq.consumer.demo;
+
+public class MessageListener {
+
+}
